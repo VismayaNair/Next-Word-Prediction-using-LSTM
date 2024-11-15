@@ -37,6 +37,7 @@ Compile and train the model using categorical cross-entropy loss and the Adam op
 ### Register Number: 212221230125
 
 ### 1.fit_vectorizer function
+```
 def fit_vectorizer(corpus):
     """
     Instantiates the vectorizer class on the corpus
@@ -65,9 +66,10 @@ def fit_vectorizer(corpus):
     ### END CODE HERE ###
     
     return vectorizer
+```
 ### 2. n_grams_seqs function
 # GRADED FUNCTION: n_gram_seqs
-
+```
 def n_gram_seqs(corpus, vectorizer):
     """
     Generates a list of n-gram sequences
@@ -94,10 +96,10 @@ def n_gram_seqs(corpus, vectorizer):
     ### END CODE HERE ###
     
     return input_sequences
-
+```
 ### 3. pad_seqs function
 # GRADED FUNCTION: pad_seqs
-
+```
 def pad_seqs(input_sequences, max_sequence_len):
     """
     Pads tokenized sequences to the same length
@@ -124,10 +126,10 @@ def pad_seqs(input_sequences, max_sequence_len):
     ### END CODE HERE ###
     
     return padded_sequences
-
+```
 ### 4. features_and_labels_dataset function
 # GRADED FUNCTION: features_and_labels
-
+```
 def features_and_labels_dataset(input_sequences, total_words):
     """
     Generates features and labels from n-grams and returns a tensorflow dataset
@@ -157,11 +159,11 @@ def features_and_labels_dataset(input_sequences, total_words):
     batched_dataset = dataset.batch(batch_size)
     
     ### END CODE HERE ###
-
+```
 
 ### 5.create_model function
 # GRADED FUNCTION: create_model
-
+```
 def create_model(total_words, max_sequence_len):
     """
     Creates a text generator model
@@ -197,7 +199,7 @@ def create_model(total_words, max_sequence_len):
     ### END CODE HERE ###
 
     return model
-
+```
 ## OUTPUT
 ### 1. fit_vectorizer output
 ![image](https://github.com/user-attachments/assets/a052837a-016d-43d8-9209-106b084a6020)
